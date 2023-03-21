@@ -1,5 +1,6 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
 import { MainPage } from '../pages/MainPage/MainPage';
+import { DetailsPage } from '../pages/DetailsPage/DetailsPage';
 import { AccountPage } from '../pages/AccountPage/AccountPage';
 import { BookPage } from '../pages/BookPage/BookPage';
 import { CartPage } from '../pages/CartPage/CartPage';
@@ -12,10 +13,12 @@ import { SignUpPage } from '../pages/SignUpPage/SignUpPage';
 import { ResetPage } from '../pages/ResetPage/ResetPage';
 import { RequareAuth } from '../components/molecules/RequareAuth/RequareAuth';
 
+
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path={ROUTE.MAIN} element={<MainTemplate />}>
             <Route index element={<MainPage />} />
+            <Route path={ROUTE.DETAILS} element={<DetailsPage />} />
             <Route path={ROUTE.ACCOUNT} element={<AccountPage />} />
             <Route path={ROUTE.BOOK} element={<BookPage />} />
             <Route path={ROUTE.CART} element={<CartPage />} />

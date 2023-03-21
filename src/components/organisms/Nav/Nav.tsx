@@ -6,6 +6,7 @@ export const Nav = () => {
   return (
     <nav className="bg-info p-3 d-flex gap-3">
         <CustomLink to={ROUTE.MAIN}>Main</CustomLink>
+        <CustomLink to={ROUTE.DETAILS}>Details</CustomLink>
         <CustomLink to={ROUTE.ACCOUNT}>Account</CustomLink>
         <CustomLink to={ROUTE.BOOK}>Book</CustomLink>
         <CustomLink to={ROUTE.CART}>Cart</CustomLink>
