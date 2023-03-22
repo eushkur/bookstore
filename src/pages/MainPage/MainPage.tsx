@@ -1,22 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { generatePath, Link } from 'react-router-dom';
+import { CountryList } from '../../components/organisms/CountryList/CountryList';
 import { ROUTE } from '../../router/routes';
 
 export const MainPage = () => {
-  const countries = [
-    {id: 1, name: 'John' },
-    {id: 2, name: 'Nill' },  
-  ]
+  const [countries, setCountries] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch('https://restcountries.com/v3.1/all')
+      .then(res => res.json())
+      .then(setCountries);
+  }, []);
+  
   return (
     <div>
-        <h1>MAINPAGE</h1>
-        {countries.map(country => {
-          return (
-            <Link to={generatePath(ROUTE.DETAILS, {id: country.name })} >
-              {country.name}
-            </Link >
-          );  
-        })}
+         <CountryList countries={countries} />   
     </div>
   );
 };

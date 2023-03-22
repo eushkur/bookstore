@@ -1,6 +1,6 @@
 export enum ROUTE {
     MAIN = '/',
-    DETAILS = "details/:id",
+    DETAILS = "details/:name",
     ACCOUNT = 'account',
     BOOK = 'book',
     CART = 'cart',
