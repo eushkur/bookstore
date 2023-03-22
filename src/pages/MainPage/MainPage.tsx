@@ -1,20 +1,38 @@
-import React, { useEffect, useState } from 'react'
-import { generatePath, Link } from 'react-router-dom';
-import { CountryList } from '../../components/organisms/CountryList/CountryList';
-import { ROUTE } from '../../router/routes';
+import { useEffect } from "react";
+import { fetchBooks } from "../../store/feautures/mainBooksSlice";
+import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
+
+
 
 export const MainPage = () => {
-  const [countries, setCountries] = useState<any[]>([]);
-
+  const dispatch = useAppDispatch();
+  const { isLoading, error, books } = useAppSelector((state) => state.books);
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all')
-      .then(res => res.json())
-      .then(setCountries);
-  }, []);
-  
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
   return (
     <div>
-         <CountryList countries={countries} />   
+    <p> "New book"</p>
+
+    {isLoading && (
+      <div className="spinner-border" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    )}
+    {error && <p>ERRORRRRRR</p>}
+
+    <div>
+      <ul>
+        {books.map((book) => {
+          return (
+            <li>
+              {book.title}
+            </li>
+          );
+        })}
+      </ul>
     </div>
-  );
+  </div>
+);
 };
