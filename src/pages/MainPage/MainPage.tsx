@@ -1,8 +1,8 @@
 import { useEffect } from "react";
+import { Title, BookCard } from "../../components";
 import { fetchBooks } from "../../store/feautures/mainBooksSlice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
-
-
+import { StyledBooksList, StyledMainPage } from "./styles";
 
 export const MainPage = () => {
   const dispatch = useAppDispatch();
@@ -12,31 +12,23 @@ export const MainPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
-    <p> "New book"</p>
+    <StyledMainPage>
+      <Title />
 
     {isLoading && (
       <div className="spinner-border" role="status">
         <span className="visually-hidden">Loading...</span>
       </div>
     )}
+
     {error && <p>ERRORRRRRR</p>}
 
-    <div>
-      <ul>
-        {books.map((book) => {
-          return (
-            <li>
-              {book.title}
-              {book.subtitle}
-              {book.isbn13}
-              {book.price}
-              {book.image}
-            </li>
-          );
+    <StyledBooksList>
+        {books.map((book, index) => {
+          return <BookCard book={book} index={index} key={book.isbn13} />;
         })}
-      </ul>
-    </div>
-  </div>
+        ;
+      </StyledBooksList>
+    </StyledMainPage>
 );
 };
