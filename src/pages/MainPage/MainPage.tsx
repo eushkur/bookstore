@@ -28,6 +28,10 @@ export const MainPage = () => {
           return (
             <li>
               {book.title}
+              {book.subtitle}
+              {book.isbn13}
+              {book.price}
+              {book.image}
             </li>
           );
         })}

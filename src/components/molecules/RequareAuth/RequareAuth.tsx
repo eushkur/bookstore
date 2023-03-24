@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navigate, Outlet } from 'react-router-dom';
-import { ROUTE } from '../../../router/routes';
+import { ROUTE } from '../../../routes/routes';
 
 export const RequareAuth = () => {
     const isAuth = true;

@@ -1,4 +1,5 @@
-export interface IBook {
+export interface Book {
+    authors: string;
     title: string;
     subtitle: string;
     isbn13: string;
@@ -7,9 +8,9 @@ export interface IBook {
     url: string;
   }
 
-  export interface IBookResponse {
+  export interface BookResponse {
     error: string;
     total: string;
-    books: IBook[];
+    books: Book[];
   }
   

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ROUTE } from '../../../router/routes';
+import { ROUTE } from '../../../routes/routes';
 import { CustomLink } from '../../molecules/CustomLink/CustomLink';
 
 export const Nav = () => {

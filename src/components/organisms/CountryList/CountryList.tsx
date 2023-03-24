@@ -1,5 +1,5 @@
 import { Link, generatePath } from "react-router-dom";
-import { ROUTE } from "../../../router/routes";
+import { ROUTE } from "../../../routes/routes";
 
 
 interface CountryListProps {

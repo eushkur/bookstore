@@ -1,10 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios, { AxiosError } from "axios";
-import { IBook, IBookResponse } from "../../types/types";
+import { Book, BookResponse } from "../../types/types";
 
 
 interface BooksState {
-  books: IBook[];
+  books: Book[];
   isLoading: boolean;
   error: null | string;
 }
@@ -16,7 +16,7 @@ const initialState: BooksState = {
 };
 
 const fetchBooks = createAsyncThunk<
-  IBookResponse,
+  BookResponse,
   undefined,
   { rejectValue: string }
 >('books/fetchBooks', async (_, { rejectWithValue }) => {

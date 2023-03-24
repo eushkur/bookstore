@@ -1,7 +1,6 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import { Footer } from '../components/organisms/Footer/Footer'
-import { Nav } from '../components/organisms/Nav/Nav'
+import { Outlet } from "react-router-dom";
+import { Footer, Nav } from "../components";
+
 
 export const MainTemplate = () => {
   return (
