@@ -9,17 +9,4 @@ import { CountryList } from "./organisms/CountryList/CountryList";
 import { Footer } from "./organisms/Footer/Footer";
 import { Nav } from "./organisms/Nav/Nav";
 
-
-export {
-    Button,
-    Form1,
-    Input,
-    Title,
-    BookCard,
-    CustomLink,
-    RequareAuth,
-    CountryList,
-    Footer,
-    Nav,
-};
-
+export { Button, Form1, Input, Title, BookCard, CustomLink, RequareAuth, CountryList, Footer, Nav };

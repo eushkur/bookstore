@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 
 interface FormProps {
-    heading: string;
+  heading: string;
 }
-export const Form1 = ({heading}: FormProps) => {
+export const Form1 = ({ heading }: FormProps) => {
   return <form>{heading}</form>;
 };

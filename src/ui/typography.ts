@@ -1,7 +1,6 @@
 import { css } from "styled-components";
 import { MediaQuery } from "./media";
 
-
 const H1 = css`
   font-weight: 700;
   font-size: 56px;
@@ -46,4 +45,4 @@ const BODY2 = css`
   line-height: 24px;
 `;
 
-export { H1, H2, H3, S1,BODY, BODY2 };
+export { H1, H2, H3, S1, BODY, BODY2 };

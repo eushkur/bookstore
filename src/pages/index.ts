@@ -9,17 +9,15 @@ import { SearchPage } from "./SearchPage/SearchPage";
 import { SignInPage } from "./SignInPage/SignInPage";
 import { SignUpPage } from "./SignUpPage/SignUpPage";
 
-
 export {
-    DetailsPage,
-    BookPage,
-    CartPage,
-    FavoritesPage,
-    MainPage,
-    ResetPage,
-    SearchPage,
-    SignInPage,
-    SignUpPage,
-    AccountPage,
+  DetailsPage,
+  BookPage,
+  CartPage,
+  FavoritesPage,
+  MainPage,
+  ResetPage,
+  SearchPage,
+  SignInPage,
+  SignUpPage,
+  AccountPage,
 };
-

@@ -15,20 +15,20 @@ export const MainPage = () => {
     <StyledMainPage>
       <Title />
 
-    {isLoading && (
-      <div className="spinner-border" role="status">
-        <span className="visually-hidden">Loading...</span>
-      </div>
-    )}
+      {isLoading && (
+        <div className="spinner-border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      )}
 
-    {error && <p>ERRORRRRRR</p>}
+      {error && <p>ERRORRRRRR</p>}
 
-    <StyledBooksList>
+      <StyledBooksList>
         {books.map((book, index) => {
           return <BookCard book={book} index={index} key={book.isbn13} />;
         })}
         ;
       </StyledBooksList>
     </StyledMainPage>
-);
+  );
 };

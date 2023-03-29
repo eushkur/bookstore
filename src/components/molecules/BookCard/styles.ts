@@ -2,10 +2,9 @@ import styled from "styled-components";
 import { Color } from "../../../ui/colors";
 import { H3, BODY2 } from "../../../ui/typography";
 
-
 const StyledBookCard = styled.li`
   display: grid;
-  box-shadow: 1px 1px 12px ${Color.Gray}
+  box-shadow: 1px 1px 12px ${Color.Gray};
 `;
 
 const WrapperImage = styled.img`

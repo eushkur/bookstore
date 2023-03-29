@@ -1,13 +1,7 @@
-import { Link } from 'react-router-dom';
-import { ROUTE } from '../../../routes/routes';
-import { Book } from '../../../types/types';
-import {
-  StyledBookCard,
-  WrapperImage,
-  BookDescription,
-  BookTitle,
-  BookContainer,
-} from './styles';
+import { Link } from "react-router-dom";
+import { ROUTE } from "../../../routes/routes";
+import { Book } from "../../../types/types";
+import { StyledBookCard, WrapperImage, BookDescription, BookTitle, BookContainer } from "./styles";
 
 interface BookCardProps {
   book: Book;
@@ -15,7 +9,7 @@ interface BookCardProps {
 }
 
 export const BookCard = ({ book }: BookCardProps) => {
-  const { isbn13, title, subtitle, image, price } = book;
+  const { isbn13, title, subtitle, price } = book;
 
   return (
     <StyledBookCard>
