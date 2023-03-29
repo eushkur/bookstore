@@ -1,22 +1,14 @@
 import { createGlobalStyle } from "styled-components";
+import { Color } from "./colors";
+import { theme } from "./theme";
 
-const GlobalStyles = createGlobalStyle`
-*{
- padding: 0;
- margin: 0;
- box-sizing:border-box;}
+export const GlobalStyles = createGlobalStyle`
 
-input {
-  border:none;
-  }
+${theme}
 
-button {
-  border:none;
+body{
+    font-family: 'Poppins', sans-serif;
+    background: ${Color.WHITE};
+    color: ${Color.PRIMARY};
 }
-
-body {font-family: 'Inter', sans-serif;}
-
-button {font-family:inherit}
-  `;
-
-export { GlobalStyles };
+`;

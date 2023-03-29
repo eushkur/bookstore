@@ -1,3 +1,13 @@
+import { Container } from "ui/container";
+import { FooterDescription, StyledFooter, WrapperFooter } from "./styles";
+
 export const Footer = () => {
-  return <footer className="bg-warning rext-center p-3">FOOTER</footer>;
+  return (
+    <WrapperFooter>
+      <StyledFooter>
+        <FooterDescription>© 2022 Bookstore</FooterDescription>
+        <FooterDescription>All rights reserved</FooterDescription>
+      </StyledFooter>
+    </WrapperFooter>
+  );
 };

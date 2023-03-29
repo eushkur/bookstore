@@ -1,14 +1,14 @@
+import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
+import { Container } from "ui/container";
 import { Footer, Nav } from "../components";
 
 export const MainTemplate = () => {
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <Container>
       <Nav />
-      <div className="flex-grow-1">
-        <Outlet />
-      </div>
+      <Outlet />
       <Footer />
-    </div>
+    </Container>
   );
 };

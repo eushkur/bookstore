@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import { Color } from "../../../ui/colors";
-import { H3, BODY2 } from "../../../ui/typography";
+import { Color } from "ui/colors";
+import { H3, BODY2 } from "ui/typography";
 
 const StyledBookCard = styled.li`
   display: grid;
-  box-shadow: 1px 1px 12px ${Color.Gray};
+  background-color: ${Color.BLUE};
+  box-shadow: 1px 1px 12px ${Color.GRAY};
 `;
 
 const WrapperImage = styled.img`
@@ -13,6 +14,7 @@ const WrapperImage = styled.img`
 
 const BookContainer = styled.div`
   display: grid;
+  color: ${Color.PRIMARY};
 `;
 
 const BookTitle = styled.h3`
@@ -20,11 +22,12 @@ const BookTitle = styled.h3`
 `;
 
 const BookDescription = styled.p`
-  color: ${Color.Secondary};
+  color: ${Color.SECONDARY};
   ${BODY2};
 `;
 
 const Price = styled.h3`
+  color: ${Color.PRIMARY};
   ${H3};
 `;
 
