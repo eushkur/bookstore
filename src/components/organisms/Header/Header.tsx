@@ -10,12 +10,11 @@ import { Link } from "react-router-dom";
 import { ROUTE } from "routes/routes";
 import { Breakpoint, Color } from "ui";
 import {
-  HeaderContainer,
   StyledHeader,
   ButtonLogo,
   Logo,
   List,
-  Item,
+  ListItem,
   FavoritesButton,
   CartButton,
   UserButton,
@@ -25,7 +24,7 @@ import {
 import { SearchHeader } from "components/molecules/SearchHeader/SearchHeader";
 import { HeaderLink } from "components/molecules/HeaderLink/HeaderLink";
 import { useState, useEffect } from "react";
-import { useWindowSize } from "store/hooks/useWindowSize";
+import { useWindowSize } from "hooks/useWindowSize";
 
 export const Header = () => {
   const { width = 0 } = useWindowSize();
@@ -37,52 +36,50 @@ export const Header = () => {
     setTheme((prevTheme: string) => (prevTheme === "light" ? "dark" : "light"));
   };
   return (
-    <HeaderContainer>
-      <StyledHeader>
-        <Link to={ROUTE.MAIN}>
-          <ButtonLogo whileHover={{ scale: 1.05 }}>
-            <Logo>
-              <LogoIcon />
-            </Logo>
-          </ButtonLogo>
-        </Link>
+    <StyledHeader>
+      <Link to={ROUTE.MAIN}>
+        <ButtonLogo whileHover={{ scale: 1.15 }}>
+          <Logo>
+            <LogoIcon />
+          </Logo>
+        </ButtonLogo>
+      </Link>
 
-        {width > Breakpoint.LG && <SearchHeader />}
+      {width > Breakpoint.LG && <SearchHeader />}
 
-        <ToggleTheme onClick={toggleTheme} whileHover={{ scale: 1.1 }}>
-          <DarkThemeIcon />
-        </ToggleTheme>
+      <ToggleTheme onClick={toggleTheme} whileHover={{ scale: 1.15 }}>
+        <DarkThemeIcon />
+      </ToggleTheme>
 
-        <List>
-          <Item>
-            <HeaderLink to={ROUTE.FAVORITES}>
-              <FavoritesButton whileHover={{ scale: 1.1 }}>
-                <FavoritesIcon width="26" stroke={Color.PRIMARY} />
-              </FavoritesButton>
-            </HeaderLink>
-          </Item>
+      <List>
+        <ListItem>
+          <HeaderLink to={ROUTE.FAVORITES}>
+            <FavoritesButton whileHover={{ scale: 1.15 }}>
+              <FavoritesIcon width="26" stroke={Color.PRIMARY} />
+            </FavoritesButton>
+          </HeaderLink>
+        </ListItem>
 
-          <Item>
-            <HeaderLink to={ROUTE.CART}>
-              <CartButton whileHover={{ scale: 1.1 }}>
-                <CartIcon width="26" stroke={Color.PRIMARY} />
-              </CartButton>
-            </HeaderLink>
-          </Item>
+        <ListItem>
+          <HeaderLink to={ROUTE.CART}>
+            <CartButton whileHover={{ scale: 1.15 }}>
+              <CartIcon width="26" stroke={Color.PRIMARY} />
+            </CartButton>
+          </HeaderLink>
+        </ListItem>
 
-          <Item>
-            <HeaderLink to={ROUTE.ACCOUNT}>
-              <UserButton whileHover={{ scale: 1.1 }}>
-                <AccountIcon width="26" stroke={Color.PRIMARY} />
-              </UserButton>
-            </HeaderLink>
-          </Item>
-        </List>
+        <ListItem>
+          <HeaderLink to={ROUTE.ACCOUNT}>
+            <UserButton whileHover={{ scale: 1.5 }}>
+              <AccountIcon width="26" stroke={Color.PRIMARY} />
+            </UserButton>
+          </HeaderLink>
+        </ListItem>
+      </List>
 
-        <ButtonBurger whileHover={{ scale: 1.1 }}>
-          <BurgerMenuIcon width="26" height="26" fill={Color.PRIMARY} />
-        </ButtonBurger>
-      </StyledHeader>
-    </HeaderContainer>
+      <ButtonBurger whileHover={{ scale: 1.15 }}>
+        <BurgerMenuIcon width="26" height="26" fill={Color.PRIMARY} />
+      </ButtonBurger>
+    </StyledHeader>
   );
 };

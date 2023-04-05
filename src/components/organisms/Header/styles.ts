@@ -2,15 +2,14 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Color, Media } from "ui";
 
-const HeaderContainer = styled.div``;
-
 const StyledHeader = styled.header`
   position: relative;
   display: grid;
   grid-template-columns: 20% 55% 5% 20%;
   align-items: center;
-  padding-block: 20px;
+  padding-block: 28px;
   border-bottom: 1px solid ${Color.SECONDARY};
+
   ${Media.LG} {
     grid-template-columns: none;
     display: flex;
@@ -31,10 +30,12 @@ const ToggleTheme = styled(motion.button)`
   background: none;
   border: none;
   cursor: pointer;
+
   ${Media.LG} {
     margin-left: auto;
   }
 `;
+
 const Logo = styled.p`
   font-size: 36px;
   font-weight: 500;
@@ -51,7 +52,7 @@ const List = styled.ul`
   }
 `;
 
-const Item = styled.li`
+const ListItem = styled.li`
   align-self: center;
 `;
 
@@ -101,11 +102,10 @@ export {
   ButtonLogo,
   ToggleTheme,
   List,
-  Item,
+  ListItem,
   FavoritesButton,
   CartButton,
   UserButton,
   ButtonBurger,
-  HeaderContainer,
   Logo,
 };

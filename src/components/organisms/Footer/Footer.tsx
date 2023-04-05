@@ -1,4 +1,3 @@
-import { Container } from "ui/container";
 import { FooterDescription, StyledFooter, WrapperFooter } from "./styles";
 
 export const Footer = () => {

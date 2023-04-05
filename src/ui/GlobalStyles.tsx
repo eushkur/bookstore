@@ -6,9 +6,25 @@ export const GlobalStyles = createGlobalStyle`
 
 ${theme}
 
-body{
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  a {
+     text-decoration: none;
+  }
+  body{
     font-family: 'Poppins', sans-serif;
     background: ${Color.WHITE};
     color: ${Color.PRIMARY};
-}
+  }
+  ul {
+    list-style: none;
+  }
+  button {
+    border: none;
+    cursor: pointer;
+  }
+
 `;

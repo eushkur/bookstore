@@ -2,11 +2,12 @@ import { useEffect } from "react";
 import { Title, BookCard } from "../../components";
 import { fetchBooks } from "../../store/feautures/mainBooksSlice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
-import { StyledBooksList, StyledMainPage } from "./styles";
+import { getBooks } from "store/selectors/bookSelectors";
+import { StyledMainPage, StyledBooksList } from "./styles";
 
 export const MainPage = () => {
   const dispatch = useAppDispatch();
-  const { isLoading, error, books } = useAppSelector((state) => state.books);
+  const { isLoading, error, books } = useAppSelector(getBooks);
   useEffect(() => {
     dispatch(fetchBooks());
   }, [dispatch]);

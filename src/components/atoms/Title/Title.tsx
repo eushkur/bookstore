@@ -1,5 +1,6 @@
 import React from "react";
+import { StyledTitle } from "./styles";
 
 export const Title = () => {
-  return <div>NEW RELEASES BOOKS</div>;
+  return <StyledTitle>NEW RELEASES BOOKS</StyledTitle>;
 };

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ROUTE } from "routes/routes";
 import { Book } from "types/types";
+
 import {
   StyledBookCard,
   WrapperImage,
