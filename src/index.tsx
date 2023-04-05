@@ -12,7 +12,6 @@ root.render(
   <>
     <GlobalStyles />,
     <Provider store={store}>
-      {" "}
       <RouterProvider router={router} />
     </Provider>
     ,
