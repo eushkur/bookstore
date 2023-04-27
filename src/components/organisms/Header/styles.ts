@@ -2,6 +2,13 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Color, Media } from "ui";
 
+const WrapperHeader = styled.div`
+  z-index: 2;
+  background: ${Color.LIGHT};
+  position: sticky;
+  top: 0;
+`;
+
 const StyledHeader = styled.header`
   position: relative;
   display: grid;
@@ -98,6 +105,7 @@ const ButtonBurger = styled(motion.button)`
 `;
 
 export {
+  WrapperHeader,
   StyledHeader,
   ButtonLogo,
   ToggleTheme,

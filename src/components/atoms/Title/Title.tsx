@@ -1,6 +1,9 @@
-import React from "react";
 import { StyledTitle } from "./styles";
 
-export const Title = () => {
-  return <StyledTitle>NEW RELEASES BOOKS</StyledTitle>;
+interface Props {
+  value: string;
+}
+
+export const Title = ({ value }: Props) => {
+  return <StyledTitle>{value}</StyledTitle>;
 };

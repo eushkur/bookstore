@@ -4,12 +4,12 @@ import { H3, BODY2 } from "ui/typography";
 
 const StyledBookCard = styled.li`
   display: grid;
-
   box-shadow: 1px 1px 12px ${Color.GRAY};
 `;
 
 const WrapperImage = styled.img`
   background-color: ${Color.BLUE};
+  padding: 1px 63px;
   width: 100%;
 `;
 
@@ -20,7 +20,12 @@ const BookContainer = styled.div`
 
 const BookTitle = styled.h3`
   text-transform: uppercase;
-
+  display: -webkit-box;
+  height: 84px;
+  padding-top: 20px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   ${H3};
 `;
 

@@ -3,7 +3,8 @@ import { Title, BookCard } from "../../components";
 import { fetchBooks } from "../../store/feautures/mainBooksSlice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
 import { getBooks } from "store/selectors/bookSelectors";
-import { StyledMainPage, StyledBooksList } from "./styles";
+import { StyledMainPage, StyledBooksList, StyledError } from "./styles";
+import { Error } from "../../components/atoms/Error/Error";
 
 export const MainPage = () => {
   const dispatch = useAppDispatch();
@@ -14,15 +15,18 @@ export const MainPage = () => {
 
   return (
     <StyledMainPage>
-      <Title />
+      <Title value="New releases book" />
 
       {isLoading && (
         <div className="spinner-border" role="status">
           <span className="visually-hidden">Loading...</span>
         </div>
       )}
-
-      {error && <p>ERRORRRRRR</p>}
+      {error && (
+        <StyledError>
+          <Error value={error} />
+        </StyledError>
+      )}
 
       <StyledBooksList>
         {books.map((book, index) => {

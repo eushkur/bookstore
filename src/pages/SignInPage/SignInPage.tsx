@@ -1,9 +1,5 @@
-import { Form1 } from "../../components";
+import { SignInForm } from "components/molecules/SignInForm/SignInForm";
 
 export const SignInPage = () => {
-  return (
-    <div>
-      <Form1 heading="Sing IN" />
-    </div>
-  );
+  return <SignInForm />;
 };

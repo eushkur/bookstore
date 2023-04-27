@@ -9,9 +9,10 @@ import {
   REGISTER,
   persistStore,
 } from "redux-persist";
-import storage from "redux-persist/es/storage";
 import booksReducer from "./feautures/mainBooksSlice";
 import searchReducer from "./feautures/searchSlice";
+import storage from "redux-persist/lib/storage";
+import useReducer from "./feautures/userSlice";
 
 const persistConfig = {
   key: "root",
@@ -20,6 +21,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
+  user: useReducer,
   books: booksReducer,
   search: searchReducer,
 });

@@ -1,4 +1,3 @@
-import { Registration } from "components/molecules/Registration/Registration";
 import { RequareAuth } from "components/molecules/RequareAuth/RequareAuth";
 import {
   MainPage,
@@ -15,6 +14,7 @@ import {
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import { MainTemplate } from "templates/MainTemplate";
 import { ROUTE } from "./routes";
+import { Registration } from "components/organisms/Registration/Registration";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(

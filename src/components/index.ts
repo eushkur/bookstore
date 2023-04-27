@@ -8,5 +8,18 @@ import { RequareAuth } from "./molecules/RequareAuth/RequareAuth";
 import { CountryList } from "./organisms/CountryList/CountryList";
 import { Footer } from "./organisms/Footer/Footer";
 import { Nav } from "./organisms/Nav/Nav";
+import { RegistrationCustomLink } from "./molecules/RegistrationCustomLink/RegistrationCustomLink";
 
-export { Button, Form1, Input, Title, BookCard, CustomLink, RequareAuth, CountryList, Footer, Nav };
+export {
+  Button,
+  Form1,
+  Input,
+  Title,
+  BookCard,
+  CustomLink,
+  RequareAuth,
+  CountryList,
+  Footer,
+  Nav,
+  RegistrationCustomLink,
+};

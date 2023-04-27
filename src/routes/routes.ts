@@ -11,4 +11,5 @@ export enum ROUTE {
   RESET = "reset",
   NOT_FOUND = "not-found",
   DETAILS_BOOK = "/books/",
+  RESET_PASSWORD = "RESET_PASSWORD"
 }
