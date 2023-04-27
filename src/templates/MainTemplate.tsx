@@ -5,10 +5,12 @@ import { Container } from "ui";
 
 export const MainTemplate = () => {
   return (
-    <Container>
+    <>
       <Header />
-      <Outlet />
+      <Container>
+        <Outlet />
+      </Container>
       <Footer />
-    </Container>
+    </>
   );
 };
