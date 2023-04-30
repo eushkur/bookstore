@@ -1,5 +1,5 @@
 import ReactStars from "react-rating-stars-component";
-import { useState } from "react";
+import { MouseEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { useToggle, useWindowSize } from "hooks";
@@ -33,6 +33,7 @@ import { Title } from "components/atoms/Title/Title";
 import { Button } from "../Registration/styles";
 import { useAppDispatch, useAppSelector } from "store/hooks/hooks";
 import { getUserInfo } from "store/selectors/userSelectors";
+import { addToFavotires } from "store/feautures/favoritesSlice";
 
 interface Props {
   bookDetails: BookDetails;
@@ -54,8 +55,15 @@ export const DetailsBook = ({ bookDetails }: Props) => {
     navigate(-1);
   };
 
-  const handleDetalise = (): void => {
+  const handleDetails = (): void => {
     toggleIsOpen();
+  };
+  const handleAddFavorites = (e: MouseEvent<HTMLElement>): void => {
+    if (isAuth) {
+      e.preventDefault();
+      dispatch(addToFavotires(bookDetails));
+      toggleIsFavorites();
+    }
   };
 
   return (
@@ -74,7 +82,7 @@ export const DetailsBook = ({ bookDetails }: Props) => {
         <DetailsContainer>
           <WrapperImage>
             <Image src={image} alt={title} />
-            <Like>
+            <Like onClick={handleAddFavorites}>
               <ButtonLike isFavorites={isFavorites} disabled={!isAuth} />
             </Like>
           </WrapperImage>
@@ -123,7 +131,7 @@ export const DetailsBook = ({ bookDetails }: Props) => {
 
             <MoreDetailse>
               <Info>More detalise</Info>
-              <ChevronButton onClick={handleDetalise}>
+              <ChevronButton onClick={handleDetails}>
                 {isOpen ? (
                   <ChevronTopIcon width="16" fill={Color.PRIMARY} />
                 ) : (

@@ -12,6 +12,9 @@ import { ReactComponent as DarkThemeIcon } from "./icons/dark-theme.svg";
 import { ReactComponent as LikeIcon } from "./icons/likeicon.svg";
 import { ReactComponent as ChevronBottomIcon } from "./icons/chevron-bottom.svg";
 import { ReactComponent as ChevronTopIcon } from "./icons/chevron-top.svg";
+import { ReactComponent as CloseCardIcon } from "./icons/close-card.svg";
+import { ReactComponent as CartActiveIcon } from "./icons/cart-active.svg";
+import { ReactComponent as FavoritesActiveIcon } from "./icons/favorites-active.svg";
 
 export {
   AccountIcon,
@@ -28,4 +31,7 @@ export {
   LikeIcon,
   ChevronBottomIcon,
   ChevronTopIcon,
+  CloseCardIcon,
+  CartActiveIcon,
+  FavoritesActiveIcon,
 };

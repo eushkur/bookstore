@@ -1,18 +1,12 @@
-import { CountryList } from "components";
-import { useEffect, useState } from "react";
+import { FavoritesBooks } from "components/molecules/FavoritesBooks/FavoritesBooks";
+import { StyledFavoritesPage } from "./styles";
+import { FreeBooks } from "components/molecules/FreeBooks/FreeBooks";
 
 export const FavoritesPage = () => {
-  const [countries, setCountries] = useState<any[]>([]);
-
-  useEffect(() => {
-    fetch("https://restcountries.com/v3.1/currency/dollar")
-      .then((res) => res.json())
-      .then(setCountries);
-  }, []);
   return (
-    <div>
-      <h1>Favorites</h1>
-      <CountryList countries={countries} />
-    </div>
+    <StyledFavoritesPage>
+      <FavoritesBooks />
+      <FreeBooks />
+    </StyledFavoritesPage>
   );
 };
