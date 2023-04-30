@@ -5,7 +5,6 @@ import {
   DarkThemeIcon,
   LightThemeIcon,
   BurgerMenuIcon,
-  CartActiveIcon,
   FavoritesActiveIcon,
 } from "assets";
 import { Link } from "react-router-dom";

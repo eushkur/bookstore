@@ -40,7 +40,7 @@ const BurgerHeader = styled.div`
 const Description = styled.p`
   text-align: center;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 44px;
 `;
 
