@@ -2,7 +2,7 @@ import { RequareAuth } from "components/molecules/RequareAuth/RequareAuth";
 import {
   MainPage,
   SearchPage,
-  DetailsPage,
+  DetailsBookPage,
   SignInPage,
   SignUpPage,
   ResetPage,
@@ -20,8 +20,8 @@ export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path={ROUTE.MAIN} element={<MainTemplate />}>
       <Route index element={<MainPage />} />
-      <Route path={ROUTE.SEARCH} element={<SearchPage />} />
-      <Route path={ROUTE.DETAILS} element={<DetailsPage />} />
+      <Route path={`${ROUTE.SEARCH}:page`} element={<SearchPage />} />
+      <Route path={`${ROUTE.DETAILS_BOOK}:id`} element={<DetailsBookPage />} />
 
       <Route element={<Registration />}>
         <Route path={ROUTE.SIGN_IN} element={<SignInPage />} />

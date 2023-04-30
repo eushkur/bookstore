@@ -80,7 +80,7 @@ export const Header = () => {
             </ListItem>
           </List>
 
-          <ButtonBurger whileHover={{ scale: 1.15 }}>
+          <ButtonBurger whileHover={{ scale:  1.15 }}>
             <BurgerMenuIcon width="26" height="26" fill={Color.PRIMARY} />
           </ButtonBurger>
         </StyledHeader>

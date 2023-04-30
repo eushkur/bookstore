@@ -9,6 +9,9 @@ import { ReactComponent as BurgerMenuIcon } from "./icons/burger.svg";
 import { ReactComponent as CrossIcon } from "./icons/cross.svg";
 import { ReactComponent as LightThemeIcon } from "./icons/light-theme.svg";
 import { ReactComponent as DarkThemeIcon } from "./icons/dark-theme.svg";
+import { ReactComponent as LikeIcon } from "./icons/likeicon.svg";
+import { ReactComponent as ChevronBottomIcon } from "./icons/chevron-bottom.svg";
+import { ReactComponent as ChevronTopIcon } from "./icons/chevron-top.svg";
 
 export {
   AccountIcon,
@@ -22,4 +25,7 @@ export {
   CrossIcon,
   LightThemeIcon,
   DarkThemeIcon,
+  LikeIcon,
+  ChevronBottomIcon,
+  ChevronTopIcon,
 };
