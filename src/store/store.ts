@@ -20,7 +20,7 @@ import cartReducer from "./feautures/cartSlice";
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["favorites"],
+  whitelist: ["user", "cart", "booksFavorites"],
 };
 
 const rootReducer = combineReducers({

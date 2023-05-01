@@ -8,13 +8,11 @@ import { GlobalStyles } from "ui/GlobalStyles";
 import { PersistGate } from "redux-persist/lib/integration/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
-
 root.render(
-  <PersistGate loading={null} persistor={persistor}>
-    <GlobalStyles />,
-    <Provider store={store}>
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <GlobalStyles />
       <RouterProvider router={router} />
-    </Provider>
-    ,
-  </PersistGate>,
+    </PersistGate>
+  </Provider>,
 );
