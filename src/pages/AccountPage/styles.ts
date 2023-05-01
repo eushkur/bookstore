@@ -132,7 +132,7 @@ const ButtonCancel = styled.button`
 
   :hover,
   :active {
-    background: ${Color.PrimaryLight};
+    background: ${Color.PRIMARY2};
   }
 
   :disabled {

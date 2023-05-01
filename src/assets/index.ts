@@ -17,7 +17,8 @@ import { ReactComponent as CartActiveIcon } from "./icons/cart-active.svg";
 import { ReactComponent as FavoritesActiveIcon } from "./icons/favorites-active.svg";
 import { ReactComponent as PlusIcon } from "./icons/plus.svg";
 import { ReactComponent as MinusIcon } from "./icons/minus.svg";
-
+import { ReactComponent as ArrowLeftPagination } from "./icons/arrow-left-pagination.svg";
+import { ReactComponent as ArrowRightPagination } from "./icons/arrow-right-pagination.svg";
 export {
   AccountIcon,
   CartIcon,
@@ -38,4 +39,6 @@ export {
   FavoritesActiveIcon,
   PlusIcon,
   MinusIcon,
+  ArrowRightPagination,
+  ArrowLeftPagination,
 };

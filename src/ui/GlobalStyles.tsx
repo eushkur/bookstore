@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-import { Color } from "./colors";
 import { theme } from "./theme";
 import { resetCSS } from "./reset";
+import { Color } from "ui";
 
 export const GlobalStyles = createGlobalStyle`
 ${theme}

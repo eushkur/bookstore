@@ -43,11 +43,6 @@ const ToggleTheme = styled(motion.button)`
   }
 `;
 
-const Logo = styled.p`
-  font-size: 36px;
-  font-weight: 500;
-`;
-
 const List = styled.ul`
   justify-self: end;
   display: grid;
@@ -115,5 +110,4 @@ export {
   CartButton,
   UserButton,
   ButtonBurger,
-  Logo,
 };

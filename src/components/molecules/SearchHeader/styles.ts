@@ -24,6 +24,7 @@ const SearchInput = styled.input`
   min-width: 500px;
   border: none;
   outline: none;
+  background: ${Color.LIGHT};
   :focus {
     color: ${Color.PRIMARY};
   }

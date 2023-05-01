@@ -1,5 +1,5 @@
 import Spinner from "react-spinners/ClipLoader";
-import { SearchIcon } from "assets";
+import { AccountIcon, SearchIcon } from "assets";
 import { useInput, useWindowSize, useDebounce } from "hooks";
 import { CSSProperties, useState, useEffect } from "react";
 import { useMatch, useParams, useNavigate, Link } from "react-router-dom";
@@ -8,6 +8,7 @@ import { getDebounceSearchValue, fetchBooksBySearch } from "store/feautures/sear
 import { useAppDispatch, useAppSelector } from "store/hooks/hooks";
 import { getBooksBySearch } from "store/selectors/searchSelectors";
 import { Breakpoint, Color } from "ui";
+import { Error } from "../../atoms/Error/Error";
 import {
   SearchInput,
   SearchButton,
@@ -20,7 +21,14 @@ import {
   Message,
   SearchError,
   Search,
+  StyledError,
 } from "./styles";
+import { AnimatePresence } from "framer-motion";
+
+const searchCardVariants = {
+  visible: (index: number) => ({ opacity: 1, scale: 1, transition: { delay: index * 0.1 } }),
+  hidden: { opacity: 0, scale: 1.2 },
+};
 
 interface SearchHeaderProps {
   handleBurger?: () => void;
@@ -81,47 +89,59 @@ export const SearchHeader = ({ handleBurger }: SearchHeaderProps) => {
       <Search whileHover={{ scale: 1.05 }}>
         <SearchInput placeholder="Search..." onChange={onChange} value={value} />
         <SearchButton onClick={handleBurger} whileHover={{ scale: 1.05 }}>
-          <SearchIcon width="20" fill={Color.SECONDARY} onClick={handleSearchPage} />
+          <SearchIcon width="20" stroke={Color.SECONDARY} onClick={handleSearchPage} />
         </SearchButton>
       </Search>
+      <AnimatePresence>
+        {isOpen && (
+          <SearchListWrapper
+            animate={{ height: "50vh" }}
+            initial={{ height: "0" }}
+            exit={{ height: "0" }}
+            transition={{ duration: 0.4 }}
+          >
+            {isLoading && (
+              <Spinner color={Color.PRIMARY} loading={isLoading} cssOverride={override} size={60} />
+            )}
+            {error && (
+              <StyledError>
+                <Error value={error} />
+              </StyledError>
+            )}
+            {booksBySearch.length > 0 && (
+              <SearchList>
+                {booksBySearch.map((book, index) => {
+                  return (
+                    <Link to={`${ROUTE.DETAILS_BOOK}${book.isbn13}`} key={book.isbn13}>
+                      <SearchCard
+                        whileTap={{ scale: 1.1 }}
+                        variants={searchCardVariants}
+                        initial="hidden"
+                        animate="visible"
+                        custom={index}
+                      >
+                        <WrapperImage>
+                          <Image src={book.image} alt={book.title} />
+                        </WrapperImage>
+                        <Title>{book.title}</Title>
+                      </SearchCard>
+                    </Link>
+                  );
+                })}
+              </SearchList>
+            )}
 
-      {isOpen && (
-        <SearchListWrapper
-          animate={{ height: "50vh" }}
-          initial={{ height: "0" }}
-          exit={{ height: "0" }}
-          transition={{ duration: 0.4 }}
-        >
-          {isLoading && (
-            <Spinner color={Color.PRIMARY} loading={isLoading} cssOverride={override} size={60} />
-          )}
-          {error && <p>Error</p>}
-          {booksBySearch.length > 0 && (
-            <SearchList>
-              {booksBySearch.map((book, index) => {
-                return (
-                  <Link to={`${ROUTE.DETAILS_BOOK}${book.isbn13}`} key={book.isbn13}>
-                    <SearchCard whileTap={{ scale: 1.1 }} initial="hidden" custom={index}>
-                      <WrapperImage>
-                        <Image src={book.image} alt={book.title} />
-                      </WrapperImage>
-                      <Title>{book.title}</Title>
-                    </SearchCard>
-                  </Link>
-                );
-              })}
-            </SearchList>
-          )}
-
-          {booksBySearch.length === 0 && (
-            <>
-              <Message>
-                No results found for <SearchError>{debounceSearchValue}</SearchError>
-              </Message>
-            </>
-          )}
-        </SearchListWrapper>
-      )}
+            {booksBySearch.length === 0 && (
+              <>
+                <Message>
+                  No results found for <SearchError>{debounceSearchValue}</SearchError>
+                  <AccountIcon width="50" height="60" fill={Color.SECONDARY} />
+                </Message>
+              </>
+            )}
+          </SearchListWrapper>
+        )}
+      </AnimatePresence>
     </>
   );
 };

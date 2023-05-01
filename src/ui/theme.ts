@@ -13,6 +13,7 @@ export const theme = css`
     --green: #caeff0;
     --orange: #fee9e2;
     --purple: #f4eefd;
+    --white2: #ffffff;
   }
 
   html[theme="dark"] {
@@ -27,5 +28,6 @@ export const theme = css`
     --green: #caeff0;
     --orange: #fee9e2;
     --purple: #a8a8a8;
+    --white2: #ffffff;
   }
 `;

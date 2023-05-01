@@ -10,5 +10,5 @@ export enum Color {
   GREEN = "var(--green)",
   ORANGE = "var(--orange)",
   PURPLE = "var(--purple)",
-  PrimaryLight = "PrimaryLight"
+  WHITE2 = "var(--white2)",
 }
