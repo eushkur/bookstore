@@ -8,11 +8,11 @@ const Registration = () => {
     <StyledRegistration>
       <ButtonWrapper>
         <RegistrationCustomLink to={ROUTE.SIGN_IN}>
-          <Button>Sign in</Button>
+          <Button>Sign In</Button>
         </RegistrationCustomLink>
 
         <RegistrationCustomLink to={ROUTE.SIGN_UP}>
-          <Button>Sign up</Button>
+          <Button>Sign Up</Button>
         </RegistrationCustomLink>
       </ButtonWrapper>
 
