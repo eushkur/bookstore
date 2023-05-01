@@ -2,7 +2,6 @@
   "name": "graduation-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://eushkur.github.io/bookstore/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",
@@ -40,7 +39,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build",
     "lint": "eslint -c .eslintrc --ext .ts,.tsx ."
   },
   "eslintConfig": {
@@ -61,7 +59,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "gh-pages": "^5.0.0"
-  }
+  "devDependencies": {}
 }
