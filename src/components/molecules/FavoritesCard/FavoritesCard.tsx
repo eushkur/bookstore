@@ -27,7 +27,7 @@ const favoritesCardVariants = {
     x: "0",
     transition: { delay: index * 0.1, duration: 0.75 },
   }),
-  hidden: { opacity: 0, x: "+100%" },
+  hidden: { opacity: 0, x: "-20%" },
 };
 
 interface FavoritesProps {
@@ -48,7 +48,7 @@ export const FavoritesCard = ({ book, index }: FavoritesProps) => {
   return (
     <Link to={`${ROUTE.DETAILS}${isbn13}`}>
       <StyledFavoritesCard
-        whileHover={{ scale: 1.03 }}
+        whileHover={{ scale: 1.1 }}
         variants={favoritesCardVariants}
         initial="hidden"
         animate="visible"
