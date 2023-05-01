@@ -3,6 +3,7 @@ import { Media } from "ui";
 import { Color } from "ui/colors";
 
 const WrapperFooter = styled.div`
+  z-index: 2;
   background: ${Color.LIGHT};
   position: sticky;
   bottom: 0;
