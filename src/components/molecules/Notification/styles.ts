@@ -10,17 +10,17 @@ const StyledNotification = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15%;
-  width: 30%;
+  height: 10%;
+  width: 20%;
   padding: 5px;
-  background: ${Color.GREEN};
+  background: ${Color.ORANGE};
 
   ${Media.LG} {
-    width: 40%;
+    width: 30%;
   }
 
   ${Media.MD} {
-    width: 80%;
+    width: 60%;
   }
 `;
 

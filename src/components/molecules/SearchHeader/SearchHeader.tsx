@@ -73,7 +73,7 @@ export const SearchHeader = ({ handleBurger }: SearchHeaderProps) => {
   }, [currentPageMain, currentPageSearch, setValue]);
 
   const handleSearchPage = () => {
-    !currentPageFavorites && !currentPageCart && navigate(`${ROUTE.SEARCH}`);
+    !currentPageFavorites && !currentPageCart && navigate(`${ROUTE.SEARCH}1`);
   };
 
   return (

@@ -6,6 +6,8 @@ import {
   LightThemeIcon,
   BurgerMenuIcon,
   FavoritesActiveIcon,
+  CartActiveIcon,
+  LogoIcon,
 } from "assets";
 import { Link } from "react-router-dom";
 import { ROUTE } from "routes/routes";
@@ -14,7 +16,6 @@ import {
   WrapperHeader,
   StyledHeader,
   ButtonLogo,
-  Logo,
   List,
   FavoritesButton,
   CartButton,
@@ -33,6 +34,7 @@ import { getUserInfo } from "store/selectors/userSelectors";
 import { AnimatePresence } from "framer-motion";
 import { HeaderLink } from "components/molecules/HeaderLink/HeaderLink";
 import { BurgerMenu } from "components/atoms/Burger/Burger";
+import { getCartBooks } from "store/selectors/cartSelectors";
 
 export const Header = () => {
   const { width = 0 } = useWindowSize();
@@ -40,6 +42,7 @@ export const Header = () => {
   const { theme } = useAppSelector(getUserInfo);
   const [isDark, toggleIsInstallDark] = useToggle();
   const [isOpen, toggleIsOpen] = useToggle();
+  const { cartBooks } = useAppSelector(getCartBooks);
   const { favoritesBooks } = useAppSelector(getFavoritesBooks);
   const setAttributeTheme = (themeValue: "light" | "dark") => {
     document.documentElement.setAttribute("theme", `${themeValue}`);
@@ -66,7 +69,7 @@ export const Header = () => {
         <StyledHeader>
           <Link to={ROUTE.MAIN}>
             <ButtonLogo whileHover={{ scale: 1.05 }}>
-              <Logo>BOOKSTORE</Logo>
+              <LogoIcon></LogoIcon>
             </ButtonLogo>
           </Link>
 
@@ -96,7 +99,11 @@ export const Header = () => {
             <ListItem>
               <HeaderLink to={ROUTE.CART}>
                 <CartButton whileHover={{ scale: 1.1 }}>
-                  <CartIcon width="24" stroke={Color.PRIMARY} />
+                  {cartBooks.length > 0 ? (
+                    <CartActiveIcon width="24" stroke={Color.PRIMARY} />
+                  ) : (
+                    <CartIcon width="24" stroke={Color.PRIMARY} />
+                  )}
                 </CartButton>
               </HeaderLink>
             </ListItem>

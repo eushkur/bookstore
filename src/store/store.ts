@@ -15,6 +15,7 @@ import storage from "redux-persist/lib/storage";
 import useReducer from "./feautures/userSlice";
 import bookDetailsReducer from "./feautures/bookDetailsSlice";
 import bookFavoritesReducer from "./feautures/favoritesSlice";
+import cartReducer from "./feautures/cartSlice";
 
 const persistConfig = {
   key: "root",
@@ -28,6 +29,7 @@ const rootReducer = combineReducers({
   search: searchReducer,
   bookDetails: bookDetailsReducer,
   booksFavorites: bookFavoritesReducer,
+  cart: cartReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

@@ -1,9 +1,7 @@
 import ReactStars from "react-rating-stars-component";
 import { MouseEvent, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { useToggle, useWindowSize } from "hooks";
-import { BookDetails } from "types/types";
 import { Breakpoint, Color } from "ui";
 import { ArrowLeftIcon, ChevronBottomIcon, ChevronTopIcon } from "assets";
 import { Notification } from "../../molecules/Notification/Notification";
@@ -22,18 +20,21 @@ import {
   InfoContainer,
   InfoTitle,
   Info,
-  MoreDetailse,
   ChevronButton,
   Preview,
   DescriptionBar,
+  MoreDetails,
 } from "./styles";
 import { ButtonLike } from "components/atoms/ButtonLike/ButtonLike";
 import { TabBar } from "components/atoms/TabBar/TabBar";
 import { Title } from "components/atoms/Title/Title";
-import { Button } from "../Registration/styles";
 import { useAppDispatch, useAppSelector } from "store/hooks/hooks";
 import { getUserInfo } from "store/selectors/userSelectors";
 import { addToFavotires } from "store/feautures/favoritesSlice";
+import { addToCart } from "store/feautures/cartSlice";
+import { Button } from "components";
+import { useNavigate } from "react-router-dom";
+import { BookDetails } from "types/types";
 
 interface Props {
   bookDetails: BookDetails;
@@ -63,6 +64,13 @@ export const DetailsBook = ({ bookDetails }: Props) => {
       e.preventDefault();
       dispatch(addToFavotires(bookDetails));
       toggleIsFavorites();
+    }
+  };
+  const handleAddToCart = (e: MouseEvent<HTMLElement>): void => {
+    if (isAuth) {
+      e.preventDefault();
+      dispatch(addToCart({ ...bookDetails, quantity: 0 }));
+      toggleIsOpenNotification();
     }
   };
 
@@ -129,7 +137,7 @@ export const DetailsBook = ({ bookDetails }: Props) => {
               </InfoContainer>
             )}
 
-            <MoreDetailse>
+            <MoreDetails>
               <Info>More detalise</Info>
               <ChevronButton onClick={handleDetails}>
                 {isOpen ? (
@@ -138,9 +146,14 @@ export const DetailsBook = ({ bookDetails }: Props) => {
                   <ChevronBottomIcon width="16" fill={Color.PRIMARY} />
                 )}
               </ChevronButton>
-            </MoreDetailse>
+            </MoreDetails>
 
-            <Button type="button" value="Add to cart" disabled={!isAuth}></Button>
+            <Button
+              type="button"
+              value="Add to cart"
+              onClick={handleAddToCart}
+              disabled={!isAuth}
+            ></Button>
             <AnimatePresence>
               {isOpenNotification && (
                 <Notification
@@ -150,7 +163,11 @@ export const DetailsBook = ({ bookDetails }: Props) => {
               )}
             </AnimatePresence>
 
-            {pdf && <Preview>Preview book</Preview>}
+            {pdf && (
+              <Preview href={Object.values(pdf)[0]} target="_blank">
+                Preview book
+              </Preview>
+            )}
           </WrapperInfo>
         </DetailsContainer>
         <TabBar value1="Description" value2="Authors" setTab={setTab} />

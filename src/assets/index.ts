@@ -15,6 +15,8 @@ import { ReactComponent as ChevronTopIcon } from "./icons/chevron-top.svg";
 import { ReactComponent as CloseCardIcon } from "./icons/close-card.svg";
 import { ReactComponent as CartActiveIcon } from "./icons/cart-active.svg";
 import { ReactComponent as FavoritesActiveIcon } from "./icons/favorites-active.svg";
+import { ReactComponent as PlusIcon } from "./icons/plus.svg";
+import { ReactComponent as MinusIcon } from "./icons/minus.svg";
 
 export {
   AccountIcon,
@@ -34,4 +36,6 @@ export {
   CloseCardIcon,
   CartActiveIcon,
   FavoritesActiveIcon,
+  PlusIcon,
+  MinusIcon,
 };

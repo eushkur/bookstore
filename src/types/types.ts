@@ -5,6 +5,7 @@ export interface Book {
   price: string;
   image: string;
   url: string;
+  rating: string;
 }
 
 export interface BookResponse {

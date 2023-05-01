@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Color } from "ui/colors";
 import { H3, BODY2 } from "ui/typography";
 
-const StyledBookCard = styled.li`
+const StyledBookCard = styled(motion.li)`
   display: grid;
   box-shadow: 1px 1px 12px ${Color.GRAY};
 `;
@@ -15,7 +16,15 @@ const WrapperImage = styled.img`
 
 const BookContainer = styled.div`
   display: grid;
+  gap: 10px;
   color: ${Color.PRIMARY};
+  padding: 0px 10px 5px;
+`;
+
+const PriceContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const BookTitle = styled.h3`
@@ -42,4 +51,12 @@ const Price = styled.h3`
   ${H3};
 `;
 
-export { StyledBookCard, WrapperImage, BookTitle, BookDescription, Price, BookContainer };
+export {
+  StyledBookCard,
+  WrapperImage,
+  BookTitle,
+  BookDescription,
+  Price,
+  BookContainer,
+  PriceContainer,
+};

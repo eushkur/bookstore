@@ -126,7 +126,7 @@ const Info = styled.p`
   }
 `;
 
-const MoreDetailse = styled.div`
+const MoreDetails = styled.div`
   display: flex;
   align-content: center;
   margin-top: 16px;
@@ -178,7 +178,7 @@ export {
   InfoContainer,
   InfoTitle,
   Info,
-  MoreDetailse,
+  MoreDetails,
   ChevronButton,
   Preview,
   DescriptionBar,
