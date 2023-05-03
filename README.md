@@ -135,12 +135,14 @@ All other features of the site you can find out by testing it.
 
 ## Contact
 
-Evgeny Ushkur - [https://www.linkedin.com/in/%D0%B5%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9-%D1%83%D1%88%D0%BA%D1%83%D1%80-6a524b262/](linkedin)
+Evgeny Ushkur - [https://www.linkedin.com/in/yauheni-ushkur/](linkedin)
 
 Project Link: [https://github.com/eushkur/bookstore.git](https://github.com/eushkur/bookstore.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/yauheni-ushkur/
 [typescriptlang.org]: https://img.shields.io/badge/-Typescript-blue?style=for-the-badge&logo=typescript&logoColor=white
 [typescript-url]: https://www.typescriptlang.org/
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
