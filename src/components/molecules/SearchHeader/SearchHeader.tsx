@@ -4,11 +4,8 @@ import { useInput, useWindowSize, useDebounce } from "hooks";
 import { CSSProperties, useState, useEffect } from "react";
 import { useMatch, useParams, useNavigate, Link } from "react-router-dom";
 import { ROUTE } from "routes";
-import { getDebounceSearchValue, fetchBooksBySearch } from "store/feautures/searchSlice";
-import { useAppDispatch, useAppSelector } from "store/hooks/hooks";
-import { getBooksBySearch } from "store/selectors/searchSelectors";
 import { Breakpoint, Color } from "ui";
-import { Error } from "../../atoms/Error/Error";
+import { Error } from "components";
 import {
   SearchInput,
   SearchButton,
@@ -24,6 +21,13 @@ import {
   StyledError,
 } from "./styles";
 import { AnimatePresence } from "framer-motion";
+import {
+  fetchBooksBySearch,
+  getBooksBySearch,
+  getDebounceSearchValue,
+  useAppDispatch,
+  useAppSelector,
+} from "store";
 
 const searchCardVariants = {
   visible: (index: number) => ({ opacity: 1, scale: 1, transition: { delay: index * 0.1 } }),

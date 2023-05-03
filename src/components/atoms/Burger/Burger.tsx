@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { MouseEvent } from "react";
 import { ROUTE } from "routes";
 import { BurgerHeader, Description, StyledBurgerMenu, WrapperContent, Error } from "./styles";
-import { SearchHeader } from "components/molecules/SearchHeader/SearchHeader";
 import { fetchSignOut } from "store/feautures/userSlice";
 import { useAppSelector, useAppDispatch } from "store/hooks/hooks";
 import { getUserInfo } from "store/selectors/userSelectors";
-import { Button } from "../Button/Button";
+
 import { CloseCardIcon } from "assets";
+import { Button, SearchHeader } from "components";
 
 interface BurgerProps {
   handleBurger: () => void;

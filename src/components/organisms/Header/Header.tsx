@@ -24,17 +24,17 @@ import {
   ToggleTheme,
   ListItem,
 } from "./styles";
-import { SearchHeader } from "components/molecules/SearchHeader/SearchHeader";
-import { useWindowSize } from "hooks/useWindowSize";
-import { useAppDispatch, useAppSelector } from "store/hooks/hooks";
-import { getFavoritesBooks } from "store/selectors/favoritesSelectors";
-import { useToggle } from "hooks";
-import { changeTheme } from "store/feautures/userSlice";
-import { getUserInfo } from "store/selectors/userSelectors";
+import { useToggle, useWindowSize } from "hooks";
 import { AnimatePresence } from "framer-motion";
-import { HeaderLink } from "components/molecules/HeaderLink/HeaderLink";
-import { BurgerMenu } from "components/atoms/Burger/Burger";
-import { getCartBooks } from "store/selectors/cartSelectors";
+import {
+  changeTheme,
+  getCartBooks,
+  getFavoritesBooks,
+  getUserInfo,
+  useAppDispatch,
+  useAppSelector,
+} from "store";
+import { BurgerMenu, HeaderLink, SearchHeader } from "components";
 
 export const Header = () => {
   const { width = 0 } = useWindowSize();

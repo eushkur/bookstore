@@ -1,14 +1,12 @@
 import { useEffect } from "react";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { Input } from "../../atoms/Input/Input";
 import { Error } from "./styles";
 import { ROUTE } from "routes";
-import { fetchSignUpUser, resetError } from "store/feautures/userSlice";
-import { useAppSelector, useAppDispatch } from "store/hooks/hooks";
-import { getUserInfo } from "store/selectors/userSelectors";
 import { StyledSignUpForm, InputError, ButtonForm } from "./styles";
 import Spinner from "react-spinners/ClipLoader";
+import { fetchSignUpUser, getUserInfo, resetError, useAppDispatch, useAppSelector } from "store";
+import { Input } from "components";
 
 export type SignUpFormValues = {
   email: string;

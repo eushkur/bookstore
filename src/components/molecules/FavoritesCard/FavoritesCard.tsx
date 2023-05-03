@@ -16,10 +16,9 @@ import {
   Like,
 } from "./styles";
 import { BookDetails } from "types/types";
-import { ButtonLike } from "components/atoms/ButtonLike/ButtonLike";
 import { useToggle } from "hooks";
-import { removeFavorite } from "store/feautures/favoritesSlice";
-import { useAppDispatch } from "store/hooks/hooks";
+import { removeFavorite, useAppDispatch } from "store";
+import { ButtonLike } from "components";
 
 const favoritesCardVariants = {
   visible: (index: number) => ({

@@ -4,13 +4,15 @@ import { Color, Breakpoint } from "ui";
 import { BookDetails } from "types/types";
 import { FavoritesWrapper, ButtonArrow, StyledFavoritesBooks, Message } from "./styles";
 import { useWindowSize } from "hooks/useWindowSize";
-import { resetDebounceSearchValue } from "store/feautures/searchSlice";
-import { useAppDispatch, useAppSelector } from "store/hooks/hooks";
-import { getFavoritesBooks } from "store/selectors/favoritesSelectors";
 import { ArrowLeftIcon } from "assets";
-import { getBooksBySearch } from "store/selectors/searchSelectors";
-import { FavoritesCard } from "../FavoritesCard/FavoritesCard";
-import { Title } from "components/atoms/Title/Title";
+import { FavoritesCard, Title } from "components";
+import {
+  getBooksBySearch,
+  getFavoritesBooks,
+  resetDebounceSearchValue,
+  useAppDispatch,
+  useAppSelector,
+} from "store";
 
 export const FavoritesBooks = () => {
   const dispatch = useAppDispatch();

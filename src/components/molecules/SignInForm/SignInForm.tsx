@@ -5,10 +5,7 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { Input } from "components";
 import { ROUTE } from "routes";
 import { ButtonForm, InputError, StyledSignInForm, Error, Text } from "./styles";
-
-import { fetchSignInUser, resetError } from "store/feautures/userSlice";
-import { getUserInfo } from "store/selectors/userSelectors";
-import { useAppSelector, useAppDispatch } from "store/hooks/hooks";
+import { fetchSignInUser, getUserInfo, resetError, useAppDispatch, useAppSelector } from "store";
 
 export type SignInFormValues = {
   email: string;

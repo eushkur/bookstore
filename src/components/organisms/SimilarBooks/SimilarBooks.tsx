@@ -1,7 +1,6 @@
 import { Book } from "types/types";
 import { StyledSimilarBooks } from "./styles";
-import { SecondaryTitle } from "components/atoms/SecondaryTitle/SecondaryTitle";
-import { Slider } from "components/atoms/Slider/Slider";
+import { SecondaryTitle, Slider } from "components";
 
 interface Props {
   booksSimilar: Book[];

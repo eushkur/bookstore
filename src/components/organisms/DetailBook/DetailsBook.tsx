@@ -4,7 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import { useToggle, useWindowSize } from "hooks";
 import { Breakpoint, Color } from "ui";
 import { ArrowLeftIcon, ChevronBottomIcon, ChevronTopIcon } from "assets";
-import { Notification } from "../../molecules/Notification/Notification";
+import { Notification } from "components";
 
 import {
   StyledDetailsBook,
