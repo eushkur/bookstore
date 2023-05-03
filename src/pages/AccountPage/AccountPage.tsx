@@ -115,7 +115,7 @@ export const AccountPage = () => {
             )}
           />
           <Info>
-            <InfoTitle>Урааааааа!!!</InfoTitle>
+            <InfoTitle>We are welcome you!</InfoTitle>
 
             <InfoContainer>
               <TitleDescription>Today:</TitleDescription>

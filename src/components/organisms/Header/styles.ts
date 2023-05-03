@@ -32,11 +32,14 @@ const ButtonLogo = styled(motion.button)`
   cursor: pointer;
 `;
 
-const ToggleTheme = styled(motion.button)`
+const ToggleTheme = styled.button`
   padding: 12px;
   background: none;
   border: none;
   cursor: pointer;
+  :hover {
+    transform: scale(1.2);
+  }
 
   ${Media.LG} {
     margin-left: auto;
@@ -58,28 +61,39 @@ const ListItem = styled.li`
   align-self: center;
 `;
 
-const FavoritesButton = styled(motion.button)`
+const FavoritesButton = styled.button`
   padding: 12px;
   background: none;
   border: none;
   cursor: pointer;
+  :hover {
+    transform: scale(1.2);
+  }
+
   ${Media.LG} {
     display: none;
   }
 `;
 
-const CartButton = styled(motion.button)`
+const CartButton = styled.button`
   padding: 12px;
   background: none;
   border: none;
   cursor: pointer;
+  :hover {
+    transform: scale(1.2);
+  }
 `;
 
-const UserButton = styled(motion.button)`
+const UserButton = styled.button`
   padding: 12px;
   background: none;
   border: none;
   cursor: pointer;
+  :hover {
+    transform: scale(1.2);
+  }
+
   ${Media.LG} {
     display: none;
   }

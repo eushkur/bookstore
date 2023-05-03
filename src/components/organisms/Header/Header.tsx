@@ -75,7 +75,7 @@ export const Header = () => {
 
           {width > Breakpoint.LG && <SearchHeader />}
 
-          <ToggleTheme onClick={handleTheme} whileHover={{ scale: 1.1 }}>
+          <ToggleTheme onClick={handleTheme}>
             {isDark ? (
               <DarkThemeIcon width="24" fill={Color.PRIMARY2} />
             ) : (
@@ -86,7 +86,7 @@ export const Header = () => {
           <List>
             <ListItem key="1">
               <HeaderLink to={ROUTE.FAVORITES}>
-                <FavoritesButton whileHover={{ scale: 1.1 }}>
+                <FavoritesButton>
                   {favoritesBooks.length > 0 ? (
                     <FavoritesActiveIcon width="24" stroke={Color.PRIMARY} />
                   ) : (
@@ -98,7 +98,7 @@ export const Header = () => {
 
             <ListItem key="2">
               <HeaderLink to={ROUTE.CART}>
-                <CartButton whileHover={{ scale: 1.1 }}>
+                <CartButton>
                   {cartBooks.length > 0 ? (
                     <CartActiveIcon width="24" stroke={Color.PRIMARY} />
                   ) : (
@@ -110,7 +110,7 @@ export const Header = () => {
 
             <ListItem key="3">
               <HeaderLink to={ROUTE.ACCOUNT}>
-                <UserButton whileHover={{ scale: 1.1 }}>
+                <UserButton>
                   <AccountIcon width="26" fill={Color.WHITE2} />
                 </UserButton>
               </HeaderLink>
