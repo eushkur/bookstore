@@ -76,15 +76,15 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/eushkur/bookstore.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Launch the project
+3. Launch the project
    ```sh
    npm start
    ```
