@@ -101,33 +101,33 @@ This is an example of how to list things you need to use the software and how to
 
 When you enter the site, you will be taken to the home page, where you will see the first 20 books provided by the open database (IT Bookstore API (version 1.0)).
 
-<img src="images/main-page.PNG" alt="Main Page" >
+<img src="images/main-page.png" alt="Main Page" >
 
 On the Home page you can use a quick search.
 
-<img src="images/quick-search-page.PNG" alt="Search Page" >
+<img src="images/quick-search-page.png" alt="Search Page" >
 
 Upon clicking on the loupe you will be navigated to the Search page displaying current books search.
 
-<img src="images/search-page.PNG" alt="Search Page" >
+<img src="images/search-page.png" alt="Search Page" >
 
 Each book has its own dedicated page, which provides you with all the relevant info on the particular entry, as well as the list of the specifically tailored reccomendations.
 
-<img src="images/details-page-1.PNG" alt="Details Page" >
-<img src="images/details-page-2.PNG" alt="Details Page" >
+<img src="images/details-page-1.png" alt="Details Page" >
+<img src="images/details-page-2.png" alt="Details Page" >
 
 In order to get access to more features, you will have to create your own user account. For this proceed to the sign up page through the corresponding link.
 
-<img src="images/sign-up-page.PNG" alt="Sign Up Page" >
+<img src="images/sign-up-page.png" alt="Sign Up Page" >
 
 Upon registration you'll get access to more features. Such as the ability to form the list of your favourite books or add books to the cart. You can search for books on these pages.
 
-<img src="images/favorites-page.PNG" alt="Favorites Page" >
-<img src="images/cart-page.PNG" alt="Cart Page" >
+<img src="images/favorites-page.png" alt="Favorites Page" >
+<img src="images/cart-page.png" alt="Cart Page" >
 
 Additionally, application provides you with functionality to configure your user profile by changing your email, password or color mode.
 
-<img src="images/account-page.PNG" alt="Account Page" >
+<img src="images/account-page.png" alt="Account Page" >
 
 All other features of the site you can find out by testing it.
 
