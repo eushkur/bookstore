@@ -3,12 +3,12 @@ import { Link, useMatch } from "react-router-dom";
 import { ROUTE } from "routes";
 import { StyledCustomLink } from "./styles";
 
-interface IProps {
+interface Props {
   children: ReactNode;
   to: ROUTE;
 }
 
-export const RegistrationCustomLink = ({ to, children }: IProps) => {
+export const RegistrationCustomLink = ({ to, children }: Props) => {
   const isActive = useMatch(to);
 
   return (

@@ -59,7 +59,7 @@ export const FavoritesBooks = () => {
           })
         ) : (
           <Message>
-            {debounceSearchValue ? "No results found. 😔" : "You don't have any favorite books. 😔"}
+            {debounceSearchValue ? "No results found." : "You don't have any favorite books."}
           </Message>
         )}
       </FavoritesWrapper>
