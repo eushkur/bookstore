@@ -2,7 +2,7 @@
   "name": "graduation-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://eushkur.github.io/bookstore/",
+  "homepage": "https://eushkur.github.io/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",
